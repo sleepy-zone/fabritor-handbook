@@ -2,46 +2,32 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 初识 Fabric.js
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Fabric.js 简介
 
-## Getting Started
+[Fabric.js](http://fabricjs.com/) 是一个十分老牌的 2d Canvas 库，项目在 2010 年左右启动，已经有十多年的时间了，甚至比我工作的时间都长的多，翻翻源码也是很老派的写法，能让你瞬间回忆起一些八股文。🫡
 
-Get started by **creating a new site**.
+不过难能可贵的是项目还在积极更新，现在的稳定版本是 5.x，本系列也会基于这个版本编写。官方正在积极开发 [6.0 版本](https://github.com/fabricjs/fabric.js/issues/8299)，从给出的 issue 上看，能力上基本保持一致，使用 TS 和 ES6 重写，对一些类 和 API 进行变更，等正式发布，本教程也会第一时间更新。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+要了解 Fabric.js 的全貌，其实看一下他的官网首页就好了。官网首页就是一个在线 DEMO，将 Fabric.js 的主要特性做了一个展示：
 
-### What you'll need
+![](@site/static/img/docs/intro/intro.png)
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+这里我们对照上图整理出 Fabric.js 主要特性：
+1. 内置对象模型，可以创建常见几何图形。
+2. 支持动态处理文字，支持文字常见样式处理。
+3. 图片以及图片滤镜
+4. 内置 Path 支持复杂图形
+5. 特效：阴影、渐变、裁剪、pattern 填充
+6. 对象成组
+7. 自由绘制
+8. 支持导入导出 SVG 和 JSON
+9. 内置动画
 
-## Generate a new site
+后面我们这个系列也会围绕这些特性展开，那我们先从一个最简单的案例开始吧。
 
-Generate a new Docusaurus site using the **classic template**.
+## 从画一个矩形开始
 
-The classic template will automatically be added to your project after you run the command:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
