@@ -8,8 +8,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fabric.js 教程',
-  tagline: '一起学习 Fabric.js！',
+  title: 'fabritor 手册',
+  tagline: '跟着 fabritor 一起学习 fabric.js！',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'sleepy-zone', // Usually your GitHub org/user name.
-  projectName: 'Fabricjs-Tutorial', // Usually your repo name.
+  projectName: 'fabritor-handbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -59,14 +59,14 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Fabric.js 教程',
+        title: 'fabritor 手册',
         logo: {
-          alt: 'Fabric.js Tutorial Logo',
+          alt: 'fabritor handbook Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            href: 'https://github.com/sleepy-zone/Fabricjs-Tutorial',
+            href: 'https://github.com/sleepy-zone/fabritor-handbook',
             label: 'GitHub',
             position: 'right',
           },
