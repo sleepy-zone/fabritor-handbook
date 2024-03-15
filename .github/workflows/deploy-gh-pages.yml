@@ -15,7 +15,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # 根据你的项目配置选择合适的Node.js版本
+        node-version: '20'  # 根据你的项目配置选择合适的Node.js版本
 
     - name: Install Dependencies
       run: npm install  # 或者使用yarn
