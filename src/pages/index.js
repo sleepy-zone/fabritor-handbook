@@ -34,7 +34,7 @@ export default function Home() {
   const history = useHistory();
 
   useEffect(() => {
-    history.push('/docs/intro');
+    history.push('/fabritor-handbook/intro');
   }, []);
 
   return (
