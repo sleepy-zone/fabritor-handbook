@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfabricjs_tutorial=self.webpackChunkfabricjs_tutorial||[]).push([[195],{9294:(t,r,u)=>{u.r(r),u.d(r,{default:()=>f});u(9960);var a=u(2263);u(6040),u(2503);var s=u(7294),e=u(6550);u(5893);function f(){const{siteConfig:t}=(0,a.Z)(),r=(0,e.k6)();return(0,s.useEffect)((()=>{r.push("/fabritor-handbook/intro")}),[]),null}}}]);
