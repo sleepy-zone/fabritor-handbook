@@ -64,19 +64,19 @@ sidebar_position: 1
 
 而自建图片设计编辑器确实也不是一件简单的事情。当我想选择一个开源项目开始的时候，我发现开源项目，最大的问题就是不够**精致**。说到精致，不得不再说一下 Canva。如果你用过 Canva，不知道你有没有发现他的文字设置，当你给一段文字设置为不同颜色时，他的工具栏处的颜色也会变为多种颜色，而当你的文字设置为白色时，工具颜色设置处会变为彩色。这只是一个小点，但做的如此精致。
 
-<img src="/img/docs/intro/canva_text_color.jpg" width="40" />
+<img src="img/docs/intro/canva_text_color.jpg" width="40" />
 
-<img src="/img/docs/intro/canva_text.jpg" width="400" />
+<img src="img/docs/intro/canva_text.jpg" width="400" />
 
 说回现在的开源项目，举个例子：箭头。fabric.js 内是没有内置箭头这个类的，需要自定义去实现，然后你就会发现，当箭头更改线宽时，只有线段的宽度更改了，三角箭头并没有放大。比如圆角矩形，在横向或者纵向拉伸时，圆角都变形了。
 
-<img src="/img/docs/intro/error_shape.jpg" width="600" />
+<img src="img/docs/intro/error_shape.jpg" width="600" />
 
 所以，我坚定的选择了开源，旨在帮助开发者快速构建一个属于自己的好用且精致的图片编辑器。
 
-## 为何会有这本小册子
+## 为何会有这本手册
 
-fabritor 开源之后，收获了一些关注，也收到了一些开发者的疑问，我意识到需要写一本小册子来帮助大家了解 fabritor。通过这本手册了解 fabritor 的技术栈以及各个特性的实现。帮助大家更好的自定义自己的图片器，也期望大家能够参与到这个项目中来，项目还是有很大的优化空间。
+fabritor 开源之后，收获了一些关注，也收到了一些开发者的疑问，我意识到需要写一本小册子来帮助大家了解 fabritor，通过这本手册了解 fabritor 的技术栈以及各个特性的实现，帮助大家更好的自定义自己的图片编辑器，也期望大家能够参与到这个项目中来，项目还是有很大的优化空间。
 
 手册的另一个目的就是帮助大家了解 fabric.js。在我使用 fabric.js 开发之初，也是希望有一份中文文档的，但很可惜，搜到的内容要么浮于表面，要么直接搬运官网。所以这本手册在讲解 fabritor 过程中，也会聊 fabric.js 相关的内容，在项目中学习，应该是个不错的过程。
 
@@ -88,4 +88,4 @@ fabritor 开源之后，收获了一些关注，也收到了一些开发者的�
 
 不过难能可贵的是项目还在积极更新，现在的稳定版本是 5.x，本系列也会基于这个版本编写。官方正在积极开发 [6.0 版本](https://github.com/fabricjs/fabric.js/issues/8299)。不过从给出的 issue 上看，能力上基本保持一致，所以学习 5.x 版本切换到 6.x 也不是什么难得事情。
 
-另外，有一个 2d Canvas 库：[Konva](https://konvajs.org/)，会经常和 fabric.js 一起讨论，Konva 更新一点，一开始就使用 TS 开发，代码分层也更清晰。但是 2d Canvas 库的内容都不是差很多，同样学会了 fabric.js 切换到 Konva 也不是什么难事。
+另外，有一个 2d Canvas 库：[Konva](https://konvajs.org/)，会经常和 fabric.js 一起讨论，Konva 更新一点，一开始就使用 TS 开发，代码分层也更清晰。但是 2d Canvas 库的内容都不是差很多，同样，学会了 fabric.js 切换到 Konva 也不是什么难事。
