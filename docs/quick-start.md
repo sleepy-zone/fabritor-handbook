@@ -47,9 +47,62 @@ yarn start
 
 `editor` 目录是和 fabric.js 相关的逻辑，封装了大量 fabric.js 功能，也是我们手册的核心内容。
 
----
+## 项目全貌
 
-接下来，我们详细介绍 fabritor 中的各项特性。
+整个项目是一个单页应用，入口文件位于 `fabritor/index.tsx`：
+
+```tsx
+<GloablStateContext.Provider
+  value={{
+    object: activeObject,
+    setActiveObject,
+    isReady,
+    setReady,
+    editor,
+    roughSvg
+  }}
+>
+  <Layout style={{ height: '100%' }} className="fabritor-layout">
+    <Spin spinning={!isReady} fullscreen />
+    <ObjectRotateAngleTip />
+    <Header />
+    <Layout>
+      <Panel />
+      <Content style={contentStyle}>
+        <ContextMenu ref={contextMenuRef} object={activeObject}>
+          <div style={workspaceStyle} ref={workspaceEl} className="fabritor-workspace">
+            <canvas ref={canvasEl} />
+          </div>
+        </ContextMenu>
+      </Content>
+      <Setter />
+    </Layout>
+
+    <svg id="fabritor-rough-svg" ref={roughSvgEl} />
+  </Layout>
+</GloablStateContext.Provider>
+```
+
+UI 比较简单，一个典型的`左中右结构`的设计器界面。（比较早接触这个项目的同学可能记得，项目最初 setter 是位于上方的，当时的考虑是这样右侧工作区 WorkSpace 空间就会很大，很利于编辑横屏的图片项目。不过在实践之后发现，Setter 位于上方，对于复杂的设置有过多的 Popover，以及很多频繁的左侧空间使用，也会打扰使用者操作。不过 UI 见仁见智，本手册不会过多讨论。）
+
+状态管理部分，因为项目主要共享的基本只有当前画布激活的对象（Object），所以直接使用了 React 的 `Context`，一个拼写错误的 `GloablStateContext`。😂
+
+初始化的代码位于一个简单的 `useEffect` 中：
+
+```ts
+useEffect(() => {
+  if (editor) {
+    initEvent();
+    initRoughSvg();
+  }
+}, [editor]);
+
+useEffect(() => {
+  initEditor();
+}, []);
+```
+
+下一节，我们介绍一下 Editor 的实现。
 
 
 
