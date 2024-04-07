@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Editor
+# Editor 类
 
 Editor 类是整个项目的核心，封装了大量和 fabric.js 有关的功能。代码位于 `editor/index.ts`。
 
