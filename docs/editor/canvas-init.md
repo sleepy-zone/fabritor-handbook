@@ -31,7 +31,7 @@ private _initCanvas () {
 新建 `fabric.Canvas` 代码比较简单，有几个配置项单独说一下：
 
 + `selection` 控制画布是否可以多选。
-+ `fireRightClick` 是否触发右键时间，这对右键菜单很有有用。
++ `fireRightClick` 是否触发右键事件，这对右键菜单很有有用。
 + `controlsAboveOverlay` 对象的 Control 是否渲染在对象之上，因为我们用矩形模拟了画布，那矩形之外如果有对象，不会渲染出来，但会渲染其 Control。
 + `preserveObjectStacking` 选中对象时是否将该对象的层级提高。
 + `imageSmoothingEnabled` 是 Canvas Context 的一个属性，用来设置图片是否平滑的属性，true 表示图片平滑（默认值），false 表示图片不平滑。
