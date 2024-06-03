@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">画布初始化 | fabritor 手册</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://sleepy-zone.github.io/fabritor-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://sleepy-zone.github.io/fabritor-handbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://sleepy-zone.github.io/fabritor-handbook/editor/canvas-init"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="画布初始化 | fabritor 手册"><meta data-rh="true" name="description" content="画布负责管理和操作对象。默认情况下，新建一个 fabric.Canvas 即可（后面 Canvas 默认都是 fabric.Canvas，如果涉及到浏览器原生 Canvas，我们会特别的称之为原生Canvas），但我们为了模拟常见的图片编辑器的效果，中间使用一个矩形作为真正的画布。"><meta data-rh="true" property="og:description" content="画布负责管理和操作对象。默认情况下，新建一个 fabric.Canvas 即可（后面 Canvas 默认都是 fabric.Canvas，如果涉及到浏览器原生 Canvas，我们会特别的称之为原生Canvas），但我们为了模拟常见的图片编辑器的效果，中间使用一个矩形作为真正的画布。"><link data-rh="true" rel="icon" href="/fabritor-handbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://sleepy-zone.github.io/fabritor-handbook/editor/canvas-init"><link data-rh="true" rel="alternate" href="https://sleepy-zone.github.io/fabritor-handbook/editor/canvas-init" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://sleepy-zone.github.io/fabritor-handbook/editor/canvas-init" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/fabritor-handbook/assets/css/styles.95c7ccc3.css">
-<script src="/fabritor-handbook/assets/js/runtime~main.462f2b7e.js" defer="defer"></script>
+<script src="/fabritor-handbook/assets/js/runtime~main.3ac406c8.js" defer="defer"></script>
 <script src="/fabritor-handbook/assets/js/main.6f9d9931.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -16,7 +16,7 @@
 <p>新建 <code>fabric.Canvas</code> 代码比较简单，有几个配置项单独说一下：</p>
 <ul>
 <li><code>selection</code> 控制画布是否可以多选。</li>
-<li><code>fireRightClick</code> 是否触发右键时间，这对右键菜单很有有用。</li>
+<li><code>fireRightClick</code> 是否触发右键事件，这对右键菜单很有有用。</li>
 <li><code>controlsAboveOverlay</code> 对象的 Control 是否渲染在对象之上，因为我们用矩形模拟了画布，那矩形之外如果有对象，不会渲染出来，但会渲染其 Control。</li>
 <li><code>preserveObjectStacking</code> 选中对象时是否将该对象的层级提高。</li>
 <li><code>imageSmoothingEnabled</code> 是 Canvas Context 的一个属性，用来设置图片是否平滑的属性，true 表示图片平滑（默认值），false 表示图片不平滑。</li>
